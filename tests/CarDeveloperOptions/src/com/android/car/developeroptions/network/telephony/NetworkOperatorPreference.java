@@ -116,7 +116,7 @@ public class NetworkOperatorPreference extends Preference {
     private void updateIcon(int level) {
         if (level < 0 || level >= NUMBER_OF_LEVELS) return;
         Context context = getContext();
-        SignalDrawable signalDrawable = new SignalDrawable(getContext());
+        SignalDrawable signalDrawable = new SignalDrawable(getContext(), false /* statusBar */);
         signalDrawable.setLevel(
                 SignalDrawable.getState(level, NUMBER_OF_LEVELS, false /* cutOut */));
 
